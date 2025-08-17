@@ -1,6 +1,7 @@
 """Simple demo Python program for CS202 Lab."""
 
 def greet(name: str) -> str:
+    """Return a greeting for the given name."""
     return f"Hello, {name}!"
 
 def factorial(n: int) -> int:
@@ -10,14 +11,14 @@ def factorial(n: int) -> int:
     return n * factorial(n - 1)
 
 def fibonacci(n: int) -> int:
-    """Return nth Fibonacci number."""
+    """Return nth Fibonacci number using iteration."""
     a, b = 0, 1
     for _ in range(n):
         a, b = b, a + b
     return a
 
 def is_prime(num: int) -> bool:
-    """Check if num is prime."""
+    """Check if num is a prime number."""
     if num <= 1:
         return False
     for i in range(2, int(num ** 0.5) + 1):
@@ -26,7 +27,7 @@ def is_prime(num: int) -> bool:
     return True
 
 def main() -> None:
-    """Demo of functions."""
+    """Demonstrate factorial, fibonacci, and prime functions."""
     demo_var = 10
     print(demo_var)
     print(greet("CS202 Student"))
