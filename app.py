@@ -4,26 +4,30 @@ def greet(name: str) -> str:
     return f"Hello, {name}!"
 
 def factorial(n: int) -> int:
+    """Return factorial of n."""
     if n == 0:
         return 1
     return n * factorial(n - 1)
 
 def fibonacci(n: int) -> int:
-    if n <= 1:
-        return n
-    return fibonacci(n - 1) + fibonacci(n - 2)
+    """Return nth Fibonacci number."""
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
 
 def is_prime(num: int) -> bool:
+    """Check if num is prime."""
     if num <= 1:
         return False
     for i in range(2, int(num ** 0.5) + 1):
-        if num % i == 0:  # fixed spacing
+        if num % i == 0:
             return False
     return True
 
 def main() -> None:
     """Demo of functions."""
-    demo_var = 10   # renamed to snake_case
+    demo_var = 10
     print(demo_var)
     print(greet("CS202 Student"))
 
